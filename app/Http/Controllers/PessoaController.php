@@ -20,13 +20,15 @@ class PessoaController extends Controller
 
     public function store(Request $request)
     {
-        $pessoa = new \App\Pessoa();
+        // $pessoa = new \App\Pessoa();
 
-        $pessoa->nome = $request->nome;
-        $pessoa->telefone = $request->telefone;
-        $pessoa->email = $request->email;
+        // $pessoa->nome = $request->nome;
+        // $pessoa->telefone = $request->telefone;
+        // $pessoa->email = $request->email;
 
-        $pessoa->save();
+        // $pessoa->save();
+
+        \App\Pessoa::create($request->all());
 
         return redirect('/pessoas');
     }
