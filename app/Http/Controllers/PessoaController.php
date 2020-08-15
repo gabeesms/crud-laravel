@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Pessoa;
 use Illuminate\Http\Request;
 
 class PessoaController extends Controller
@@ -31,5 +31,18 @@ class PessoaController extends Controller
         \App\Pessoa::create($request->all());
 
         return redirect('/pessoas');
+    }
+
+    public function edit(Pessoa $pessoa)
+    {
+        return view('pessoa.create', compact('pessoa'));
+    }
+
+    public function update(Request $request, Pessoa $pessoa)
+    {
+        $pessoa->update($request->all());
+        
+        return redirect('/pessoas');
+        
     }
 }

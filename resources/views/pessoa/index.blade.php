@@ -18,7 +18,9 @@
         <td>Nome: {{ $p->nome}}</td>
         <td>Telefone: {{ $p->telefone}}</td>
         <td>Email: {{ $p->email}}</td>
-        <td>---</td>
+        <td>
+            <a href="/pessoas/{{ $p->id }}/edit">Editar</a>
+        </td>
     </tr>
     @endforeach
 </table>
