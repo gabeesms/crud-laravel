@@ -18,6 +18,8 @@ class CreatePessoasTable extends Migration
             $table->string('nome', 100);
             $table->string('telefone', 20);
             $table->string('email', 50);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

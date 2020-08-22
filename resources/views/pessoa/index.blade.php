@@ -1,8 +1,8 @@
-@extends('template.master');
+@extends('layouts.app')
 
-@section('titulo', 'Lista de Pessoas')
+{{-- @section('titulo', 'Lista de Pessoas') --}}
 
-@section('conteudo')
+@section('content')
 
 <h1>Pessoas Cadastradas</h1>
 
