@@ -26,3 +26,6 @@ Route::get('/', function () {
 // Route::delete('pessoas/{pessoa}', 'PessoaController@destroy');
 
 Route::resource('pessoas', 'PessoaController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
